@@ -299,29 +299,6 @@ export default function Home() {
                 </motion.div>
             </div>
 
-            {/* Source code link - better positioned for mobile */}
-            <motion.a
-                href="https://github.com/kokonutd/bolt-hackathon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-16 right-2 md:bottom-4 md:right-4 z-20 flex items-center gap-2 md:gap-3 px-3 md:px-4 py-2 md:py-2.5 bg-black/50 backdrop-blur-sm rounded-full border border-[#4FD1C5]/10 hover:border-[#4FD1C5]/30 hover:bg-black/70 transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 3 }}
-                tabIndex={0}
-                aria-label="View source code on GitHub"
-            >
-                <Github
-                    size={16}
-                    className="text-[#4FD1C5] group-hover:text-[#4FD1C5]"
-                />
-                <span className="text-xs md:text-sm text-white/70 group-hover:text-white transition-colors">
-                    Source
-                </span>
-
-                {/* Subtle highlight line on hover */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#4FD1C5]/50 group-hover:w-[90%] transition-all duration-300" />
-            </motion.a>
 
             {/* Background decorative elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
