@@ -1,7 +1,7 @@
 "use client";
 
 import CustomButton from "@/components/ui/custom-button";
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar, Github } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -283,6 +283,25 @@ export default function Home() {
                     </div>
                 </motion.div>
             </div>
+
+            {/* Source code link - bottom right corner */}
+            <motion.a
+                href="https://github.com/kokonutd/bolt-hackathon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 z-20 flex items-center gap-2 px-3 py-1.5 bg-black/50 backdrop-blur-sm rounded-full border border-[#4FD1C5]/10 hover:border-[#4FD1C5]/30 hover:bg-black/70 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 3 }}
+                tabIndex={0}
+                aria-label="View source code on GitHub"
+            >
+                <Github size={14} className="text-[#4FD1C5] group-hover:text-[#4FD1C5]" />
+                <span className="text-xs text-white/70 group-hover:text-white transition-colors">See Source Code</span>
+                
+                {/* Subtle highlight line on hover */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#4FD1C5]/50 group-hover:w-[90%] transition-all duration-300" />
+            </motion.a>
 
             {/* Background decorative elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
